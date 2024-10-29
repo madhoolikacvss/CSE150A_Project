@@ -1,0 +1,10 @@
+## This file contains all of our meeting summaries 
+###28/10/24:
+1. Start with preprocessing tha data sets: selecting target features, clearing NaN columns and rows, interpoate
+2. Scaling: Standardization and normalization 
+3. Plotting the data
+
+**Milestone 2 Requirements: ** Due 3rd Nov
+1. Perform the data exploration step (i.e. evaluate your data, # of observations, details about your data distributions, scales, missing data, column descriptions)
+2. Plot your data. For tabular data, you will need to run scatters, for image data, you will need to plot your example classes.
+3. How will you preprocess your data? You should explain this in your README.md file and link your Jupyter notebook to it. All code and  Jupyter notebooks have be uploaded to your repo.
