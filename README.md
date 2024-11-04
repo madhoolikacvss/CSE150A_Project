@@ -22,4 +22,8 @@ Dataset 1 was extracted as a pdf from Scripps' website. We imported tabula
 were empty and ‘platform_code’,'battery' and ‘drogue’ was data related to the ships/drifters collecting the data. These columns are not useful for observing the environmental factors of the ocean.
 - The remaining columns are 'latitude', 'longitude' which provide the location, slp - sea level pressure, sst - sea surface temperature, presdiff - pressure difference were converted to numerical data from 'Object' data type.
 
-[link](https://colab.research.google.com/drive/1YpusAxOyCNkgLbNwInFFsIg0mX5Y-iJQ?authuser=1#scrollTo=wP8xqptjSyLf)
+## Planning on using the datasets
+- From dataset 1 we have data related to abundance from years 1980 - 2020. We have the environmental factors such as Depth, Salinity, Temperature, d13C-DIC, DIC, ALK from the same regions and these factors can be correlated to the zoo plankton abundance.
+- Dataset 3 has some important features such as sea level pressure, surface level temperature etc , but they relate to the Atlantic region and not the pacific region the other two datasets are focussed on. Initially we thought of training a model on datasets 1 (output - abundance) and 2(inputs - Depth, Salinity, Temp, d13C-DIC, DIC, ALK) in pacific region and predict the zooplankton abundance in the atlantic region using the factors from dataset 3(inputs - slp, sst, presdiff), but it does not seem feasible as the input factors in dataset 3 are diffrent from those we are going to train from dataset 2.
+
+[Jupyter Notebook Link](https://colab.research.google.com/drive/1YpusAxOyCNkgLbNwInFFsIg0mX5Y-iJQ?usp=sharing)
