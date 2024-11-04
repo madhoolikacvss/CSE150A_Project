@@ -21,3 +21,5 @@ Dataset 1 was extracted as a pdf from Scripps' website. We imported tabula
 - We have dropped the columns ['platform_code','windspd','winddir','conductivity','wvht', 'domwaveperiod','domwavedir','avgwaveperiod','gpsfixdel','salinity','drogue'] becasue the columns ['windspd','winddir','conductivity','wvht', 'domwaveperiod','domwavedir','avgwaveperiod','gpsfixdel','salinity']
 were empty and ‘platform_code’,'battery' and ‘drogue’ was data related to the ships/drifters collecting the data. These columns are not useful for observing the environmental factors of the ocean.
 - The remaining columns are 'latitude', 'longitude' which provide the location, slp - sea level pressure, sst - sea surface temperature, presdiff - pressure difference were converted to numerical data from 'Object' data type.
+
+[link](https://colab.research.google.com/drive/1YpusAxOyCNkgLbNwInFFsIg0mX5Y-iJQ?authuser=1#scrollTo=wP8xqptjSyLf)
