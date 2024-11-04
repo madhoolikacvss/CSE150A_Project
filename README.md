@@ -1,8 +1,8 @@
 # CSE151A_Project
 
-Dataset 1 was extracted as a pdf from Scripps' website. We imported tabula
-
 ## Dataset 1: Zooplankton data from Scripps 
+This was extracted as a pdf from Scripps' website. We imported tabula to help convert pdfs into csv. It has around 90 rows of data for both the year ranged from the year ranges (1980 - 1999) and (2000 - 2021) with pooled and unpooled data. Unpooled data is noncumulative data (single samples for each cruise trip). Unpooled data is useless to us, which we got rid of. The pooled data for these years gave us about 60 rows of data. These observations give us 4-6 readings of the population of zooplankton for every year. We did not have any missing data or columns. 
+
   - The data had the columns ['Cruise', 'Ship', 'Date', 'Line', 'Station', 'Region', 'TowBegin','TowEnd', 'Latitude', 'Longitude', 'Abundance', 'Tows', 'Source']. Out of these, the only columns needed were: 'Date' - which tells us the year of data extraction, 'Region' - either Southern or Central California and 'Abundance' - the population of Zooplanktons in that year.
   - We dropped the other columns, we did not have any N/A in the columns we chose for this dataset.
   - We did binary encoding to represent the two regions SC and CC.
