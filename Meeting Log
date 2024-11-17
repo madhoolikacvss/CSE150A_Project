@@ -13,3 +13,6 @@
 1. Create a column to store the DIC-ALK Ratio so essentially ```data['DIC_ALK_Ratio'] = data['DIC'] / data['ALK']```
 2. Log Transform the DIC and ALK columns to reduce potential skewness in their distributions
 3. After plotting the graph, we realized DIC and ALK are left-skewed so realized cube root transformation.
+
+**Ideas for milestone 4:**
+- Change the years to dates to make the model more accurate
