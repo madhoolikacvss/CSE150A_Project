@@ -27,7 +27,9 @@ This model outperformed linear regression and the engineered features (e.g., DIC
 
 - **Results:**
 - **Discussion :**
-  Our Zooplankton Data Analysis Journey: From Confusion to (Some) Clarity
+
+  
+Our Zooplankton Data Analysis Journey: From Confusion to (Some) Clarity
 Starting out, we were pretty overwhelmed. We had two datasets that seemed impossible to reconcile: one with zooplankton abundance data from 2000-2021 (just 62 rows!) and this massive environmental dataset with 1374 samples containing all these ocean measurements. How do you even begin to work with such mismatched data?
 The Big Challenge was making the data work together. The first big decision we explored as a group was figuring out how to use our limited abundance data across all those environmental samples. We initially thought about just copying the abundance values across years, but that felt too simplistic. Instead, we decided to build a model that could predict abundance values based on time, which would make our predictions more granular.
 
@@ -51,14 +53,14 @@ For our second model, we tried ElasticNet regression (kind of like regular regre
 
 Honestly, this performance did not match our expectations. The similar train and test errors suggest we're not overfitting too badly, but the high MAPE shows we're still missing something important in our predictions.
 
-*** What We Learned (And What I'd Do Differently)
+**What We Learned (And What I'd Do Differently)**
 - We probably should have explored non-linear relationships - zooplankton populations likely don't respond linearly to environmental changes.
 - The seasonal encoding could be more sophisticated - maybe using cyclic features instead of categorical variables.
 
-*** The Honest Truth
+**The Honest Truth**
 While our models show some predictive power, we must admit they're not as accurate as we'd initially hoped. It really just highlights the true scale of building ML models and that you do not actually know how hard it can be until you start digging and exploring yourself. The rather high error rates (27.4% for the first model and 53% for the second) suggest we may be missing some important factors. This makes sense, though, since zooplankton populations are affected by so many things we couldn't measure: predation, phytoplankton abundance, ocean currents, etc.
 
-** What's Next?
+**What's Next?**
 If we could continue this project, we'd love to:
 - Try more advanced models like Random Forests that can capture non-linear relationships.
 - Collect more frequent abundance measurements.
