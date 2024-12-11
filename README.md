@@ -53,7 +53,7 @@ For our second model, we tried ElasticNet regression (kind of like regular regre
 
 Honestly, this performance did not match our expectations. The similar train and test errors suggest we're not overfitting too badly, but the high MAPE shows we're still missing something important in our predictions.
 
-**What We Learned (And What I'd Do Differently)**
+**What We Learned**
 - We probably should have explored non-linear relationships - zooplankton populations likely don't respond linearly to environmental changes.
 - The seasonal encoding could be more sophisticated - maybe using cyclic features instead of categorical variables.
 
