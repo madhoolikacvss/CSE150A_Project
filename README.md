@@ -41,15 +41,15 @@ For our first model, we chose to use a simple Linear Regression model as our bas
 
 
 **Model 2:**
-  #mention feature expantion. An image showing why clustering data points was an important feature is shown below:
-![Figure 3](https://github.com/user-attachments/assets/666874d1-f8b1-4300-b66e-cc565aca4ceb)
 
 
-Before we created our second model, we decided to modify our original linear regression model and made use of bootstrapping instead, to increase accuracy. This would help address any uncertainties regarding the performance of our first model. Additionally, we performed feature expansion and added a number of features to our data including the season, cluster assignments, and carbon storage potential, which was calculated using DIC and ALK values. We preprocessed these features, by applying Min-Max Scaling and using similar methods to those described above. For the second model itself, we used an Elastic Net Regularization model. The second model aims to improve performance by incorporating additional features and controlling for overfitting using regularization. We then used the first and second dataset to create our model, with Depth, Salinity, Temp, d13C-DIC, DIC/ALK Ratio, fractional year, cluster assignments and Carbon Storage Potential as predictors for Abundance. Similar to the firt model, we split the data into training (80%) and testing (20%) subsets 
+Before we created our second model, we decided to modify our original linear regression model and made use of bootstrapping instead, to increase accuracy. This would help address any uncertainties regarding the performance of our first model. Additionally, we performed feature expansion and added a number of features to our data including the season, cluster assignments, and carbon storage potential, which was calculated using DIC and ALK values. We found these added features to be very useful when it came to the accuracy of the model. The cluster feature in particular was quite significant, seeing as the data was split into distinct clusters, as shown in a figure below. We preprocessed these features, by applying Min-Max Scaling and using similar methods to those described above. For the second model itself, we used an Elastic Net Regularization model. The second model aims to improve performance by incorporating additional features and controlling for overfitting using regularization. We then used the first and second dataset to create our model, with Depth, Salinity, Temp, d13C-DIC, DIC/ALK Ratio, fractional year, cluster assignments and Carbon Storage Potential as predictors for Abundance. Similar to the firt model, we split the data into training (80%) and testing (20%) subsets 
 We then trained our model which made use of Elastic Net, combining L1 and L2 regularization. Once again, we used MSE, MAE, MAPE, and R² to evaluate our model and plotted graphs to visualize training/testing error with varying regularization strengths.
 This model outperformed linear regression and the engineered features (e.g., DIC/ALK Ratio, fractional year) seemed to contributed significantly to the model’s performance. We did observe minor overfitting but decided that it was within acceptable limits
 Our train vs Test MSE for each fold (from *figure 4*):
 ![Figure 4](https://github.com/user-attachments/assets/ec0e6ca2-a377-414f-8292-37a2dc321baa)
+
+![Figure 3](https://github.com/user-attachments/assets/666874d1-f8b1-4300-b66e-cc565aca4ceb)
 
 **Results:**
 
