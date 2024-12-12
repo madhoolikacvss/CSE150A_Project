@@ -24,21 +24,31 @@ Predicting zooplankton abundance using machine learning is a fascinating blend o
 **Methods used:**
   
 **Data Exploration:**
-Two of our major data sets inlcude: Zooplanton Database from Scripps Intitue of Oceanography's Mark Ohman Lab (SIO Pelagic Intertibrates Collection) and Environmental Pollution data from Scripps' Ocean Time-series Data. We initially decided on three datasets four our first milestone. The first was Zooplankton Abundance Data (Scripps) which covered zooplankton population data (1980–2021) with columns Year, Region, and Abundance (as shown in _figure 1_). The second dataset was the Environmental Pollution, which had a range of environmental data including Depth, Salinity, Temp, d13C-DIC, DIC and ALK. The third was the Atlantic Drifters dataset, but we decided to drop it later and it was not directly used due to its focus on the Atlantic region and differing features.
+Two of our major data sets inlcude: Zooplanton Database from Scripps Intitue of Oceanography's Mark Ohman Lab (SIO Pelagic Intertibrates Collection) and Environmental Pollution data from Scripps' Ocean Time-series Data. We initially decided on three datasets four our first milestone. The first was Zooplankton Abundance Data (Scripps) which covered zooplankton population data (1980–2021) with columns Year, Region, and Abundance (as shown in _figure 1_). The second dataset was the Environmental Pollution, which had a range of environmental data including Depth, Salinity, Temp, d13C-DIC, DIC and ALK. Correlation between the features and Zooplankton abundance is shown in *figure 2*. The third was the Atlantic Drifters dataset, but we decided to drop it later and it was not directly used due to its focus on the Atlantic region and differing features.
 
 **Data Preprocessing:**
 During the preprocessing stage, we performed data cleaning, normalization and feature engineering. In order to clean the data, we  removed any irrelevant columns and handled missing values. Then we applied Min-Max Scaling to all of the continuous variables in order to standardize the data. Finally, we added features to our data including ratios, seasonal categories, cluster assignments, and combined features like carbon storage potential.
 
 <img width="127" alt="image" src="https://github.com/user-attachments/assets/a8585274-2d93-4b3b-9518-35ca5549de38" />
-_figure 1. An example of how our Zooplankton data set looks like_
+*figure 1. An example of how our Zooplankton data set looks like*
+
+![Figure 2. Correlation betweeen pollution features](https://github.com/user-attachments/assets/a0da7cba-1fe0-4c15-a25a-8a7f3db3e7a9)
+
 
 **Model 1:**
-For our first model, we chose to use a simple Linear Regression model as our baseline, focusing on the relationship between the Year and Abundance to predict zooplankton population trends over time. We used Dataset 1, with Year as the predictor for Abundance. We then split the data into training (80%) and testing (20%) subsets and trained our model. Then, in order to evaluate our model we used various metrics like Mean Squared Error (MSE), Mean Absolute Error (MAE), and R² Score The model demonstrated a linear relationship between Year and Abundance. The model revealed important trends, but lacked predictive power when applied to environmental factors.
+For our first model, we chose to use a simple Linear Regression model as our baseline, focusing on the relationship between the Year and Abundance to predict zooplankton population trends over time. We used Dataset 1, with Year as the predictor for Abundance. We then split the data into training (80%) and testing (20%) subsets and trained our model. Then, in order to evaluate our model we used various metrics like Mean Squared Error (MSE), Mean Absolute Error (MAE), and R² Score The model demonstrated a linear relationship between Year and Abundance. The model revealed important trends, but lacked predictive power when applied to environmental factors. Our fitting model is shown in *figure 3*
+![Figure 3](https://github.com/user-attachments/assets/90c50bca-84c0-4b31-a3a1-52c19c66f677)
+
 
 **Model 2:**
+  #mention feature expantion. An image showing why clustering data points was an important feature is shown below:
+![Figure 3](https://github.com/user-attachments/assets/666874d1-f8b1-4300-b66e-cc565aca4ceb)
+
 For our second model, we used an Elastic Net Regularization model. The second model aims to improve performance by incorporating additional features and controlling for overfitting using regularization. We used the first and second dataset to create our model, with Depth, Salinity, Temp, d13C-DIC, DIC/ALK Ratio, fractional year, cluster assignments and Carbon Storage Potential as predictors for Abundance. Similar to the firt model, we split the data into training (80%) and testing (20%) subsets 
 We then trained our model which made use of Elastic Net, combining L1 and L2 regularization. Once again, we used MSE, MAE, MAPE, and R² to evaluate our model and plotted graphs to visualize training/testing error with varying regularization strengths.
 This model outperformed linear regression and the engineered features (e.g., DIC/ALK Ratio, fractional year) seemed to contributed significantly to the model’s performance. We did observe minor overfitting but decided that it was within acceptable limits
+Our train vs Test MSE for each fold (from *figure 4*):
+![Figure 4](https://github.com/user-attachments/assets/ec0e6ca2-a377-414f-8292-37a2dc321baa)
 
 **Results:**
 **Discussion :**
