@@ -15,7 +15,7 @@ Predicting zooplankton abundance using machine learning is a fascinating blend o
 3. Ocean Health Monitoring: Tracking zooplankton populations can serve as an early warning system for ecosystem degradation and pollution events.
 4. Carbon Cycle Studies: Zooplankton play a vital role in the marine carbon cycle. Understanding their dynamics can help us assess the ocean's capacity to absorb carbon dioxide.
 
-**All prior submissions:** link all notebooks, in brackets mention what milestones they correspond to
+**All prior submissions:** links to all our past notebooks:
 [Milestone 2 Notebook Link](https://colab.research.google.com/drive/1YpusAxOyCNkgLbNwInFFsIg0mX5Y-iJQ?usp=sharing) 
 [Milestone 3 Notebook Link](https://colab.research.google.com/drive/1YpusAxOyCNkgLbNwInFFsIg0mX5Y-iJQ?usp=sharing)
 [Milestone 4 Notebook](https://colab.research.google.com/drive/1EQEcjeUrm6Erm4sgytVkt5_YzZd7FKiq#scrollTo=r6h1-li8Kapq)
