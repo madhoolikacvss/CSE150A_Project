@@ -29,9 +29,8 @@ Two of our major data sets inlcude: Zooplanton Database from Scripps Intitue of 
 **Data Preprocessing:**
 During the preprocessing stage, we performed data cleaning, normalization and feature engineering. In order to clean the data, we  removed any irrelevant columns and handled missing values. Additionally, we converted certain attribute values from string to numeric, to make them easier to work with. We then applied Min-Max Scaling to all of the continuous variables in order to standardize the data and ensure consistency. Fianlly, we also encoded any categorical attributes like 'Region', for example, using one-hot encoding.
 
-![Figure 1. Zooplankton Dataset example](https://github.com/user-attachments/assets/a8585274-2d93-4b3b-9518-35ca5549de38)
-
-![Figure 2. Correlation betweeen pollution features](https://github.com/user-attachments/assets/a0da7cba-1fe0-4c15-a25a-8a7f3db3e7a9)
+|![Figure 1.](https://github.com/user-attachments/assets/a8585274-2d93-4b3b-9518-35ca5549de38)<br>Zooplankton Dataset example|![Figure 2.](https://github.com/user-attachments/assets/a0da7cba-1fe0-4c15-a25a-8a7f3db3e7a9)<br>Correlation betweeen pollution features|
+|:-:|:-:|
 
 
 **Model 1:**
