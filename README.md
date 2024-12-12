@@ -24,7 +24,7 @@ Predicting zooplankton abundance using machine learning is a fascinating blend o
 **Methods used:**
   
 **Data Exploration:**
-Two of our major data sets inlcude: Zooplanton Database from Scripps Intitue of Oceanography's Mark Ohman Lab (SIO Pelagic Intertibrates Collection) and Environmental Pollution data from Scripps' Ocean Time-series Data. We initially decided on three datasets four our first milestone. The first was Zooplankton Abundance Data (Scripps) which covered zooplankton population data (1980–2021) with columns Year, Region, and Abundance (as shown in _figure 1_). The second dataset was the Environmental Pollution, which had a range of environmental data including Depth, Salinity, Temp, d13C-DIC, DIC and ALK. Correlation between the features and Zooplankton abundance is shown in *figure 2*. The third was the Atlantic Drifters dataset, but we decided to drop it later and it was not directly used due to its focus on the Atlantic region and differing features.
+Two of our major data sets inlcude: Zooplanton Database from Scripps Intitue of Oceanography's Mark Ohman Lab (SIO Pelagic Intertibrates Collection) and Environmental Pollution data from Scripps' Ocean Time-series Data. We initially decided on three datasets four our first milestone. The first was Zooplankton Abundance Data (Scripps) which covered zooplankton population data (1980–2021) with columns Year, Region, and Abundance (as shown in _figure 1_). The second dataset was the Environmental Pollution, which had a range of environmental data including Depth, Salinity, Temp, d13C-DIC, DIC and ALK. Correlation between the features and Zooplankton abundance is shown in *figure 2*. The third was the Atlantic Drifters dataset, but we decided to drop it later and it was not directly used due to its focus on the Atlantic region, not Pacific which the other datasets focussed on, and differing features.
 
 **Data Preprocessing:**
 During the preprocessing stage, we performed data cleaning, normalization and feature engineering. In order to clean the data, we  removed any irrelevant columns and handled missing values. Then we applied Min-Max Scaling to all of the continuous variables in order to standardize the data. Finally, we added features to our data including ratios, seasonal categories, cluster assignments, and combined features like carbon storage potential.
@@ -51,6 +51,7 @@ Our train vs Test MSE for each fold (from *figure 4*):
 ![Figure 4](https://github.com/user-attachments/assets/ec0e6ca2-a377-414f-8292-37a2dc321baa)
 
 **Results:**
+
 **Discussion :**
 Our Zooplankton Data Analysis Journey: From Confusion to (Some) Clarity
 Starting out, we were pretty overwhelmed. We had two datasets that seemed impossible to reconcile: one with zooplankton abundance data from 2000-2021 (just 62 rows!) and this massive environmental dataset with 1374 samples containing all these ocean measurements. How do you even begin to work with such mismatched data?
