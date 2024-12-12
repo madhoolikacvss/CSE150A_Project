@@ -15,7 +15,8 @@ Predicting zooplankton abundance using machine learning is a fascinating blend o
 3. Ocean Health Monitoring: Tracking zooplankton populations can serve as an early warning system for ecosystem degradation and pollution events.
 4. Carbon Cycle Studies: Zooplankton play a vital role in the marine carbon cycle. Understanding their dynamics can help us assess the ocean's capacity to absorb carbon dioxide.
 
-### **All prior submissions:** link all notebooks, in brackets mention what milestones they correspond to
+
+**All prior submissions:** links to all our past notebooks:
 [Milestone 2 Notebook Link](https://colab.research.google.com/drive/1YpusAxOyCNkgLbNwInFFsIg0mX5Y-iJQ?usp=sharing) 
 [Milestone 3 Notebook Link](https://colab.research.google.com/drive/1YpusAxOyCNkgLbNwInFFsIg0mX5Y-iJQ?usp=sharing)
 [Milestone 4 Notebook](https://colab.research.google.com/drive/1EQEcjeUrm6Erm4sgytVkt5_YzZd7FKiq#scrollTo=r6h1-li8Kapq)
@@ -26,12 +27,12 @@ Predicting zooplankton abundance using machine learning is a fascinating blend o
 ### **Data Exploration:**
 Two of our major data sets inlcude: Zooplanton Database from Scripps Intitue of Oceanography's Mark Ohman Lab (SIO Pelagic Intertibrates Collection) and Environmental Pollution data from Scripps' Ocean Time-series Data. We initially decided on three datasets four our first milestone. The first was Zooplankton Abundance Data (Scripps) which covered zooplankton population data (1980–2021) with columns Year, Region, and Abundance (as shown in _figure 1_). The second dataset was the Environmental Pollution, which had a range of environmental data including Depth, Salinity, Temp, d13C-DIC, DIC and ALK. Correlation between the features and Zooplankton abundance is shown in *figure 2*. The third was the Atlantic Drifters dataset, but we decided to drop it later and it was not directly used due to its focus on the Atlantic region, not Pacific which the other datasets focussed on, and differing features.
 
-### **Data Preprocessing:**
-During the preprocessing stage, we performed data cleaning, normalization and feature engineering. In order to clean the data, we  removed any irrelevant columns and handled missing values. Then we applied Min-Max Scaling to all of the continuous variables in order to standardize the data. Finally, we added features to our data including ratios, seasonal categories, cluster assignments, and combined features like carbon storage potential.
 
-![Figure 1. An example of how our Zooplankton data set looks like](https://github.com/user-attachments/assets/a8585274-2d93-4b3b-9518-35ca5549de38)
+**Data Preprocessing:**
+During the preprocessing stage, we performed data cleaning, normalization and feature engineering. In order to clean the data, we  removed any irrelevant columns and handled missing values. Additionally, we converted certain attribute values from string to numeric, to make them easier to work with. We then applied Min-Max Scaling to all of the continuous variables in order to standardize the data and also encoded any categorical attributes, like 'Region', using one-hot encoding to ensure consistency. Finally, we plotted the data using pairplots and correlation heatmaps to visualize the relationship between certain features, before moving on to create our models.
 
-![Figure 2. Correlation betweeen pollution features](https://github.com/user-attachments/assets/a0da7cba-1fe0-4c15-a25a-8a7f3db3e7a9)
+|![Figure 1.](https://github.com/user-attachments/assets/a8585274-2d93-4b3b-9518-35ca5549de38)<br>Zooplankton Dataset example|![Figure 2.](https://github.com/user-attachments/assets/a0da7cba-1fe0-4c15-a25a-8a7f3db3e7a9)<br>Correlation betweeen pollution features|
+|:-:|:-:|
 
 
 ### **Model 1:**
@@ -39,11 +40,11 @@ For our first model, we chose to use a simple Linear Regression model as our bas
 ![Figure 3](https://github.com/user-attachments/assets/90c50bca-84c0-4b31-a3a1-52c19c66f677)
 
 
-### **Model 2:**
-  #mention feature expantion. An image showing why clustering data points was an important feature is shown below:
-![Figure 3](https://github.com/user-attachments/assets/666874d1-f8b1-4300-b66e-cc565aca4ceb)
 
-For our second model, we used an Elastic Net Regularization model. The second model aims to improve performance by incorporating additional features and controlling for overfitting using regularization. We used the first and second dataset to create our model, with Depth, Salinity, Temp, d13C-DIC, DIC/ALK Ratio, fractional year, cluster assignments and Carbon Storage Potential as predictors for Abundance. Similar to the firt model, we split the data into training (80%) and testing (20%) subsets 
+**Model 2:**
+
+
+Before we created our second model, we decided to modify our original linear regression model and made use of bootstrapping instead, to increase accuracy. This would help address any uncertainties regarding the performance of our first model. Additionally, we performed feature expansion and added a number of features to our data including the season, cluster assignments, and carbon storage potential, which was calculated using DIC and ALK values. We found these added features to be very useful when it came to the accuracy of the model. The cluster feature in particular was quite significant, seeing as the data was split into distinct clusters, as shown in a figure below. We preprocessed these features, by applying Min-Max Scaling and using similar methods to those described above. For the second model itself, we used an Elastic Net Regularization model. The second model aims to improve performance by incorporating additional features and controlling for overfitting using regularization. We then used the first and second dataset to create our model, with Depth, Salinity, Temp, d13C-DIC, DIC/ALK Ratio, fractional year, cluster assignments and Carbon Storage Potential as predictors for Abundance. Similar to the first model, we split the data into training (80%) and testing (20%) subsets 
 We then trained our model which made use of Elastic Net, combining L1 and L2 regularization. Once again, we used MSE, MAE, MAPE, and R² to evaluate our model and plotted graphs to visualize training/testing error with varying regularization strengths.
 This model outperformed linear regression and the engineered features (e.g., DIC/ALK Ratio, fractional year) seemed to contributed significantly to the model’s performance. We did observe minor overfitting but decided that it was within acceptable limits
 
