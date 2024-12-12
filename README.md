@@ -45,9 +45,9 @@ Before we created our second model, we decided to modify our original linear reg
 We then trained our model which made use of Elastic Net, combining L1 and L2 regularization. Once again, we used MSE, MAE, MAPE, and R² to evaluate our model and plotted graphs to visualize training/testing error with varying regularization strengths.
 This model outperformed linear regression and the engineered features (e.g., DIC/ALK Ratio, fractional year) seemed to contributed significantly to the model’s performance. We did observe minor overfitting but decided that it was within acceptable limits
 Our train vs Test MSE for each fold (from *figure 4*):
-![Figure 4](https://github.com/user-attachments/assets/ec0e6ca2-a377-414f-8292-37a2dc321baa)
 
-![Figure 3](https://github.com/user-attachments/assets/666874d1-f8b1-4300-b66e-cc565aca4ceb)
+|![Figure 1.](https://github.com/user-attachments/assets/ec0e6ca2-a377-414f-8292-37a2dc321baa)<br>MSE graph|![Figure 2.](https://github.com/user-attachments/assets/666874d1-f8b1-4300-b66e-cc565aca4ceb)<br>Clustering Assignments|
+|:-:|:-:|
 
 **Results:**
 
