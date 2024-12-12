@@ -17,9 +17,9 @@ Predicting zooplankton abundance using machine learning is a fascinating blend o
 
 
 **All prior submissions:** links to all our past notebooks:
-[Milestone 2 Notebook Link](https://colab.research.google.com/drive/1YpusAxOyCNkgLbNwInFFsIg0mX5Y-iJQ?usp=sharing) 
-[Milestone 3 Notebook Link](https://colab.research.google.com/drive/1YpusAxOyCNkgLbNwInFFsIg0mX5Y-iJQ?usp=sharing)
-[Milestone 4 Notebook](https://colab.research.google.com/drive/1EQEcjeUrm6Erm4sgytVkt5_YzZd7FKiq#scrollTo=r6h1-li8Kapq)
+[Milestone 2 Notebook Link](https://github.com/madhoolikacvss/CSE151A_Project/blob/main/Milestone_2.ipynb) 
+[Milestone 3 Notebook Link](https://github.com/madhoolikacvss/CSE151A_Project/blob/main/Milestone_3.ipynb)
+[Milestone 4 Notebook](https://github.com/madhoolikacvss/CSE151A_Project/blob/main/Milestone_4.ipynb)
 
 
 ## **Methods used:**
